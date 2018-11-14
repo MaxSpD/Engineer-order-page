@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Заказ вызова</title>
+        <link href="index.css" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=%3Ca142cddb-0034-40c8-8173-5682a64ec938%3E&lang=ru_RU"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="logo_worker">
+            </div>
+            <div class="main-container__title title">
+                <h1 class="title__h1 text">Заказать выезд инженера на объект</h1>
+                <h2 class="title__h2 text">Произведем бесплатную экспертизу объема работ</h2>
+            </div>
+            <form class="main-container__reg-form reg-form">
+                <div class="reg-form__input-container">
+                    <div class="reg-form__input-wrapper first-input-wrapper">
+                        <input class ="reg-form__input text" type="text" name="name" placeholder="Ваше имя">
+                        <div class="validation-img validation-img_disabled"></div>
+                    </div>
+                    <div class="reg-form__input-wrapper second-input-wrapper">
+                        <input class ="reg-form__input text" type="text" name="number" maxlength="11"
+                               placeholder="Телефон">
+                        <div class="validation-img validation-img_disabled"></div>
+                    </div>
+                    <div class="reg-form__input-wrapper  third-input-wrapper">
+                        <div class="location-img"></div>
+                        <div class="reg-form__location-container location-container">
+                            <span class="location-container__inscription_disabled text">Расположение объекта</span>
+                            <div class="current-location">
+                                <input class="current-location__text text" type="button" value="Расположение объекта"
+                                       name ="location" onclick="showMap();">
+                                <div class="current-location__img_disabled cross"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reg-form__map map_disabled"></div>
+                <input class ="reg-form__button" type="submit" value="Заказать выезд инженера" onClick="validateForm(this.form, event)">
+            </form>
+            <a class="main-container__booklet booklet text" href="">Скачать буклет о нас</a>
+            <section class="main-container__service service">
+                <div class="service__title">
+                    <hr class="service__line line">
+                    <h2 class="service__title-text text">Уникальный сервис</h2>
+                    <hr class="service__line line">
+                </div>
+                <div class="service__advantages-container">
+                    <article class="advantage">
+                        <div class="advantage__check">
+                        </div>
+                        <h2 class="advantage__title text">
+                            Контроль полного цикла работ
+                        </h2>
+                        <p class="advantage__paragraph text">
+                            Когда всем занимается одна организация, вам спокойней. Плюс еще несколько строчек текста.
+                        </p>
+                    </article>
+                    <article class="advantage">
+                        <div class="advantage__check">
+                        </div>
+                        <h2 class="advantage__title text">
+                            Инженерный контроль объектов
+                        </h2>
+                        <p class="advantage__paragraph text">
+                            Вы можете не беспокоится о внезапном выходе из строя оборудования, и обратиться к нам бесплатно.
+                        </p>
+                    </article>
+                    <article class="advantage">
+                        <div class="advantage__check">
+                        </div>
+                        <h2 class="advantage__title text">
+                            Ленэнерго, ПСК, городские и областные инстанции
+                        </h2>
+                        <p class="advantage__paragraph text">
+                            Вам больше не придется проходить процедуру согласования и сдачу объекта.
+                        </p>
+                    </article>
+                    <article class="advantage">
+                        <div class="advantage__check">
+                        </div>
+                        <h2 class="advantage__title text">
+                            Поэтапная оплата
+                        </h2>
+                        <p class="advantage__paragraph text">
+                            Вы платите за видимый результат. Плюс еще несколько строчек текста, чтобы запоплнить необходимый обем.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <template class="template">
+                <div class="main-container__info-panel info-panel">
+                    <hr class="info-panel__line line">
+                    <div class="info-panel__container info">
+                        <h1 class="info-panel__number text">8 (812) 965-06-81</h1>
+                        <span class="info-panel__working-hours text">Пн-Пт 10-18</span>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </body>
+</html>
